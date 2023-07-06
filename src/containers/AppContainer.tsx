@@ -1,5 +1,10 @@
 import { Outlet } from 'react-router-dom'
+
 import { makeStyles } from '@material-ui/core/styles'
+
+import { GoogleOAuthProvider } from '@react-oauth/google'
+
+import { GOOGLE_CLIENT_ID } from 'utils/constants'
 
 const useStyles = makeStyles(
   theme => ({
@@ -18,7 +23,9 @@ export const AppContainer = () => {
 
   return (
     <div className={classes.root}>
-      <Outlet />
+      <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+        <Outlet />
+      </GoogleOAuthProvider>
     </div>
   )
 }
