@@ -1,20 +1,18 @@
-import { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core'
-
-import { signInWithPopup, GoogleAuthProvider, signOut, User as FirebaseUser } from 'firebase/auth'
+import { signInWithPopup, GoogleAuthProvider, signOut, signInWithRedirect } from 'firebase/auth'
 
 import { auth } from 'config/firebaseConfig'
-
-const signInWrapper = async () => {
-  try {
-    const result = signInWithPopup(auth, new GoogleAuthProvider())
-  } catch (error) {
-    console.error(error)
-  }
-}
+import { isPortrait } from 'utils/orientation'
 
 export const SignIn = () => {
-  return <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
+  // Desktop: signInWithPopup
+  // return <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
+
+  // Mobile: signInWithRedirect
+  return isPortrait() ? (
+    <button onClick={() => signInWithRedirect(auth, new GoogleAuthProvider())}>Sign In</button>
+  ) : (
+    <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
+  )
 }
 
 export const SignOut = () => {
