@@ -4,13 +4,11 @@ import { auth } from 'config/firebaseConfig'
 import { isPortrait } from 'utils/orientation'
 
 export const SignIn = () => {
-  // Desktop: signInWithPopup
-  // return <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
-
-  // Mobile: signInWithRedirect
   return isPortrait() ? (
+    // Mobile: signInWithRedirect
     <button onClick={() => signInWithRedirect(auth, new GoogleAuthProvider())}>Sign In</button>
   ) : (
+    // Desktop: signInWithPopup
     <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
   )
 }
