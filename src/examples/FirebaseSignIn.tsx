@@ -39,11 +39,13 @@ const useStyles = makeStyles(
 export const FirebaseSignIn = (props: {}) => {
   const classes = useStyles(props)
 
-  const { user, loading: userLoading } = useFirebaseAuth()
+  const { user, loading } = useFirebaseAuth()
 
   // console.log('USER: ', user)
   // console.log('PHOTO: ', user?.photoURL)
-  return (
+  return loading ? (
+    <div>LOADING</div>
+  ) : (
     <div className={classes.root}>
       {!user ? (
         <SignIn />

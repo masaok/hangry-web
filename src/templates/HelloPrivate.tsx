@@ -6,11 +6,11 @@ const useStyles = makeStyles(
       backgroundColor: 'lightblue', // this works
     },
   }),
-  { name: 'HelloWorld' }
+  { name: 'HelloPrivate' }
 )
 
-export const HelloWorld = () => {
+export const HelloPrivate = () => {
   const classes = useStyles()
 
-  return <div className={classes.root}>HELLO WORLD</div>
+  return <div className={classes.root}>HELLO PRIVATE</div>
 }

@@ -32,9 +32,12 @@ export const ReactOauthGoogleSimple = (props: any) => {
       <div>
         <GoogleLogin
           useOneTap={true}
-          // type="icon"
+          type="standard"
           onSuccess={credentialResponse => {
-            console.log('CREDENTIAL RESPONSE: ', JSON.stringify(credentialResponse, null, 2))
+            console.log(
+              'CREDENTIAL RESPONSE JWT TOKEN: ',
+              JSON.stringify(credentialResponse, null, 2)
+            )
           }}
           onError={() => {
             console.log('Login Failed')
