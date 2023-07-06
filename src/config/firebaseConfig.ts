@@ -9,39 +9,14 @@ import { getAnalytics } from 'firebase/analytics'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey: 'AIzaSyAqX_1zC-PrDbCQKMU3X5iuWzxHVpoAqHQ',
-  // authDomain: 'intrinsic-value-app.firebaseapp.com',
-  // // authDomain: 'auth.intrinsicvalue.app',
-  // projectId: 'intrinsic-value-app',
-  // storageBucket: 'intrinsic-value-app.appspot.com',
-  // messagingSenderId: '534761462171',
-  // appId: '1:534761462171:web:9c57eae7621628df00e93e',
-  // measurementId: 'G-L3VTJDB8PE',
-
-  apiKey: 'AIzaSyAqX_1zC-PrDbCQKMU3X5iuWzxHVpoAqHQ',
-  authDomain: 'intrinsic-value-app.firebaseapp.com',
-  projectId: 'intrinsic-value-app',
-  storageBucket: 'intrinsic-value-app.appspot.com',
-  messagingSenderId: '534761462171',
-  appId: '1:534761462171:web:832e991ab457cc5900e93e',
-  measurementId: 'G-FV71W7G0VC',
-
-  // apiKey: 'AIzaSyCsURxQcN7SShHjqjy5BC2qd_9Zgto86y0',
-  // authDomain: 'private-market-data.firebaseapp.com',
-  // projectId: 'private-market-data',
-  // storageBucket: 'private-market-data.appspot.com',
-  // messagingSenderId: '126114183301',
-  // appId: '1:126114183301:web:f6d25ddcc512ef6f1091ec',
+  apiKey: 'AIzaSyAi30qBhTMJqi-sIleO6ilMSr1yo0S1qjs',
+  authDomain: 'hangry-6e8fa.firebaseapp.com',
+  projectId: 'hangry-6e8fa',
+  storageBucket: 'hangry-6e8fa.appspot.com',
+  messagingSenderId: '430096350518',
+  appId: '1:430096350518:web:e9e437a6f636b02335c797',
+  measurementId: 'G-GQVJ94S5GW',
 }
-
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyCsURxQcN7SShHjqjy5BC2qd_9Zgto86y0',
-//   authDomain: 'private-market-data.firebaseapp.com',
-//   projectId: 'private-market-data',
-//   storageBucket: 'private-market-data.appspot.com',
-//   messagingSenderId: '126114183301',
-//   appId: '1:126114183301:web:f6d25ddcc512ef6f1091ec',
-// }
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig)
