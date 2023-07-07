@@ -9,6 +9,7 @@ import { FirebaseSignIn } from 'examples/FirebaseSignIn'
 import { AppRoutes } from 'routes/AppRoutes'
 import { LandingDemo } from 'templates/LandingDemo'
 import { Homepage } from 'pages/Homepage'
+import { YelpGraphQLDemo } from 'examples/YelpGraphQLDemo'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="examples">
             <Route path="google" element={<ReactOauthGoogleSimple />} />
             <Route path="firebase" element={<FirebaseSignIn />} />
+            <Route path="yelp" element={<YelpGraphQLDemo />} />
           </Route>
 
           {/* Protected and Public Routes start here */}
